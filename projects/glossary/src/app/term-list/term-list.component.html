@@ -1,0 +1,8 @@
+<h1>Glossary entries</h1>
+<p>Standard climate-related definitions to help you draft climate-aligned contracts</p>
+
+<div class='terms'>
+    <div class='term' *ngFor='let term of (airtable.terms | async)'>
+        <a [routerLink]='"/term/" + term.id'>{{term.title}}</a>
+    </div>
+</div>

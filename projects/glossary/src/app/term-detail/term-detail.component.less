@@ -1,0 +1,104 @@
+@import '../../common.less';
+:host {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    color: @color-blackish;
+
+    .back {
+        .source-sans-pro;
+        font-size: 1rem;
+        span {
+            text-decoration: underline;
+        }
+        margin-bottom: 3.5em;
+        &:visited, &:hover {
+            color: @color-blackish;
+        }
+    }
+
+    .pretitle {
+        margin-bottom: 2px;
+        font-size: 1.2em;
+        color: @color-grayish;
+        .source-sans-pro;
+    }
+
+    h1, h2 {
+        line-height: 1.05;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 0.5em;
+        .source-serif-pro;
+    }
+
+    h1 {
+        font-size: 3.5em;
+    }
+
+    h2 {
+        margin-top: 1em;
+        font-size: 1.8em;
+    }
+
+    ::ng-deep p {
+        line-height: 1.55;
+        margin: 0 0 1.5em;
+        .source-serif-pro;
+    }
+
+    .disclaimer {
+        width: 100%;
+        .disclaimer-header {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin: 0;
+            cursor: pointer;
+            .source-sans-pro;
+
+            .icon {
+                font-size: 40px;
+                line-height: 0;
+            }
+        }
+        .disclaimer-content {
+            padding: 25px;
+            background: #e8e8e8;
+            font-size: 1.3em;
+            line-height: 1.55;
+        }
+    }
+
+    .definitions {
+        display: flex;
+        flex-flow: column;
+        gap: 2em;
+        width: 100%;
+        align-items: stretch;
+
+        .definition {
+            border: 1px solid #CCC;
+            padding: 1.5em;
+
+            .definition-header {
+                font-weight: 700;
+                font-size: 1.3em;
+                line-height: 1.05;
+                margin: 0;
+                margin-bottom: 0.5em;
+                .source-sans-pro;
+            }
+        }
+    }
+
+    div.section {
+        font-size: 1.3em;
+    }
+}

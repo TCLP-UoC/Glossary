@@ -1,0 +1,33 @@
+.source-sans-pro {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.source-serif-pro {
+  font-family: 'Source Serif Pro', serif;
+}
+
+@color-blackish: rgb(11, 12, 12);
+@color-grayish: #828b90;
+@color-linkish: #0d60a9;
+@color-linkish-dark: rgb(25, 25, 112);
+
+::ng-deep {
+  a {
+    color: @color-linkish;
+    text-decoration: none;
+    &:hover, &:visited, &:active {
+      color: @color-linkish-dark;
+    }
+  }
+  
+  p {
+    margin: 0 0 1.5em !important;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  li {
+    line-height: 1.5;
+  }
+}
