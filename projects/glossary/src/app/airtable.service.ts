@@ -27,7 +27,7 @@ export class AirtableService {
     };
     const params: any = {
       maxRecords: '10000',
-      view: 'Grid view'
+      view: 'publish'
     };
     if (offset) {
       params['offset'] = offset;
