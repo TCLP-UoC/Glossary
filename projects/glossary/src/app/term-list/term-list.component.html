@@ -1,8 +1,11 @@
 <h1>Glossary entries</h1>
 <p>Standard climate-related definitions to help you draft climate-aligned contracts</p>
 
+<div class='filter'>
+    <input class='search' placeholder='Search Glossary...' [(ngModel)]='query'/>
+</div>
 <div class='terms'>
-    <div class='term' *ngFor='let term of (airtable.terms | async)'>
+    <div class='term' *ngFor='let term of terms'>
         <a [routerLink]='"/term/" + term.id'>{{term.title}}</a>
     </div>
 </div>
