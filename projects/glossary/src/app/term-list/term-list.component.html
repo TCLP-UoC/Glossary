@@ -6,6 +6,6 @@
 </div>
 <div class='terms'>
     <div class='term' *ngFor='let term of terms'>
-        <a [routerLink]='"/term/" + term.id'>{{term.title}}</a>
+        <a [routerLink]='["/term", term.id]'>{{term.title}}</a>
     </div>
 </div>
