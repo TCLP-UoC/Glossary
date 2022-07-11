@@ -21,13 +21,52 @@
         text-align: center;
     }
 
-    input {
-        padding: 4px 8px;
-        border-radius: 4px;
-        border: 1px solid #888;
-        font-size: 1.2em;
-        .source-sans-pro;
+    .filter {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 1em;
+        
         margin-bottom: 2em;
+
+        input {
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #888;
+            font-size: 1.2em;
+            .source-sans-pro;
+        }
+        .letters {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+
+            &.active {
+                opacity: 1;
+            }
+            
+            a {
+                .source-sans-pro;
+                font-size: 1.2em;
+
+                cursor: pointer;
+                user-select: none;
+                
+                color: @color-grayish;
+                &:hover {
+                    color: @color-blackish;
+                }
+                &.active {
+                    color: @color-blackish;
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 
     .terms {

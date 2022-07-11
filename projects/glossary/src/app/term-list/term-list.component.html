@@ -3,6 +3,9 @@
 
 <div class='filter'>
     <input class='search' placeholder='Search Glossary Terms...' [(ngModel)]='query'/>
+    <div class='letters' [class.active]='!query'>
+        <a *ngFor='let letter of letters' [class.active]='letter === activeLetter' (click)='activeLetter = letter'>{{letter}}</a>
+    </div>
 </div>
 <div class='terms'>
     <div class='term' *ngFor='let term of terms'>
