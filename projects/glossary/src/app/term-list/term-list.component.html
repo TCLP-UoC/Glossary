@@ -2,7 +2,7 @@
 <p>Standard climate-related definitions to help you draft climate-aligned contracts</p>
 
 <div class='filter'>
-    <input class='search' placeholder='Search Glossary Terms...' [(ngModel)]='query'/>
+    <input class='search' placeholder='Search for a glossary term' [(ngModel)]='query'/>
     <div class='letters' [class.active]='!query'>
         <a *ngFor='let letter of letters' [class.active]='letter === activeLetter' (click)='activeLetter = letter'>{{letter}}</a>
     </div>
